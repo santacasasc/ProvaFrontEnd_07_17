@@ -29,5 +29,13 @@ namespace ProvaFrontEnd_07_17.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<ProvaFrontEnd_07_17.Models.Noticias.Noticia> Noticias { get; set; }
+
+        public System.Data.Entity.DbSet<ProvaFrontEnd_07_17.Models.Noticias.Categoria> Categorias { get; set; }
+
+        public System.Data.Entity.DbSet<ProvaFrontEnd_07_17.Models.Noticias.Item> Items { get; set; }
+
+        public System.Data.Entity.DbSet<ProvaFrontEnd_07_17.Models.Noticias.Layout> Layouts { get; set; }
     }
 }

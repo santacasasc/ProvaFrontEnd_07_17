@@ -1,0 +1,17 @@
+﻿@model IEnumerable<ProvaFrontEnd_07_17.Models.Noticias.Noticia>
+
+@{
+    ViewBag.Title = "Home Page Modal";
+}
+
+<div class="row">
+    @foreach(var n in Model)
+    {
+        <div>@n.Titulo</div>
+        @Html.ActionLink("Visualizar", "VisualizarModal", new { id = @n.Id })
+    }
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

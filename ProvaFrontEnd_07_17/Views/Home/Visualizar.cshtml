@@ -1,0 +1,15 @@
+﻿@model ProvaFrontEnd_07_17.Models.Noticias.Noticia
+
+@{
+    ViewBag.Title = "Home Page";
+    ViewBag.FacebooImg = Model.ImagemFacebook;
+}
+
+<div class="row">
+    <div>@Model.Titulo</div>
+    @foreach (var i in Model.Itens)
+    {
+        <div>@i.Texto</div>
+        <img src="~/Content/img/@i.URL" />
+    }
+</div>
